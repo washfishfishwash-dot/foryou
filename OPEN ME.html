@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💿</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loadingScreen">
+  <img src="images/loading.gif" class="loading-gif">
+</div>
+
+<div class="overlay">
+  <div class="window">
+
+    <div class="window-bg"></div>
+
+    <div class="slider">
+
+      <section class="slide active">
+        <img src="images/intro-popup.gif"
+             class="full-click"
+             id="introClick">
+      </section>
+
+      <section class="slide cover-slide">
+        <img src="images/case-closed.png" class="cd-closed">
+      </section>
+
+      <section class="slide open-slide">
+        <img src="images/case-open.png" class="cd-open">
+      </section>
+
+      <section class="slide">
+        <img src="images/booklet-1.png" class="booklet">
+      </section>
+
+      <section class="slide player" data-song="0"></section>
+
+      <section class="slide">
+        <img src="images/booklet-2.png" class="booklet">
+      </section>
+
+      <section class="slide player" data-song="1"></section>
+
+      <section class="slide">
+        <img src="images/booklet-3.png" class="booklet">
+      </section>
+
+      <section class="slide player" data-song="2"></section>
+
+      <section class="slide">
+        <img src="images/booklet-4.png" class="booklet">
+      </section>
+
+      <section class="slide player" data-song="3"></section>
+
+      <section class="slide">
+        <img src="images/booklet-5.png" class="booklet">
+      </section>
+
+      <section class="slide player" data-song="4"></section>
+
+      <section class="slide">
+        <img src="images/final-page.png" class="booklet">
+      </section>
+
+    </div>
+
+    <img id="openBtn"
+         src="images/open.png"
+         class="open-btn">
+
+    <div class="nav">
+      <img id="backBtn" src="images/back.png">
+      <img id="nextBtn" src="images/next.png">
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

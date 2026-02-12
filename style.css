@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  position: relative;
+  width: 420px;
+  height: 680px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: black;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8),
+              0 0 20px rgba(255,255,255,0.05);
+}
+
+
+.window-bg {
+  position: absolute;
+  inset: 0;
+  background: url("images/window-bg.gif") center/cover no-repeat;
+  z-index: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.full-click {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.cd-closed {
+  position: absolute;
+  width: 350px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cd-open {
+  position: absolute;
+  width: 400px;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.booklet {
+  position: absolute;
+  width: 390px;
+  height: auto;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.player-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.disc {
+  position: absolute;
+  width: 200px;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.disc.spinning {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+.song-title {
+  position: absolute;
+  top: 390px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+
+.song-controls {
+  position: absolute;
+  top: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.song-btn {
+  width: 50px;
+  cursor: pointer;
+}
+
+.open-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.nav img {
+  width: 60px;
+  cursor: pointer;
+}
+
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+}
+
+.loading-gif {
+  width: 250px;
+}
+
+.overlay {
+  display: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay {
+  animation: fadeInApp 0.8s ease forwards;
+}
+
+@keyframes fadeInApp {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.secret-message {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 99999;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+
+
